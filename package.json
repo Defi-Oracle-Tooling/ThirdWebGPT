@@ -1,4 +1,25 @@
 {
   "name": "ThirdWebGPT",
-  "packageManager": "yarn@4.5.3"
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "packageManager": "yarn@4.5.3",
+  "dependencies": {
+    "@types/node": "^22.10.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "langchain": "^0.3.8",
+    "openai": "^4.77.0",
+    "pinecone-client": "^2.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "test": "jest"
+  }
 }
